@@ -19,7 +19,7 @@ export const Footer = ({ isDarkMode }) => {
           afsalhameedbin@gmail.com
         </div>
       </div> */}
-      <footer className="flex  flex-col md:flex-row  gap-4 items-center justify-between px-10 md:py-15 w-full pb-4 bg-white dark:bg-gradient-to-b text-black from-[#fcf4ff] dark:from-darkTheme dark:from-1% dark:via-darkHover/90 dark:via-90%  dark:to-darkHover/90 to-[#fcf4ff]/30 dark:to-90% dark:text-white/70">
+      <footer className="flex  flex-col md:flex-row  gap-4 items-center justify-between px-3 md:px-10 md:py-15 w-full pb-4 bg-white dark:bg-gradient-to-b text-black from-[#fcf4ff] dark:from-darkTheme dark:from-1% dark:via-darkHover/90 dark:via-90%  dark:to-darkHover/90 to-[#fcf4ff]/30 dark:to-90% dark:text-white/70">
         <p className=" text-center">
           © 2025 Afsal Hameed. All rights reserved.
         </p>
