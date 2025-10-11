@@ -41,15 +41,15 @@ export const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-[var(--col-auto)]  gap-3 dark:text-black "
+        className=" "
       >
-        <div className="grid grid-cols-1 md:grid-cols-none md:flex  items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+        <div className="flex  flex-col md:flex-row  items-center gap-6 md:h-[400px] w-full max-w-5xl mt-10 mx-auto ">
           {workData.map(({ bgImage, description, title, website }, index) => (
             <motion.a
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               key={index}
-              className="relative group flex-grow transition-all md:w-56 h-[400px] duration-500 hover:w-full"
+              className="relative group  flex-grow transition-all md:w-56 h-[400px] duration-500 hover:w-full"
               href={website ? website : ""}
               target="_blank"
             >
@@ -58,7 +58,7 @@ export const Work = ({ isDarkMode }) => {
                 src={bgImage}
                 alt="image"
               />
-              <div className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div className="absolute inset-0 flex flex-col justify-end p-10 text-white  bg-black/50 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <h1 className="text-3xl">{title}</h1>
                 <p className="text-sm">{description}</p>
               </div>
@@ -66,22 +66,6 @@ export const Work = ({ isDarkMode }) => {
           ))}
         </div>
       </motion.div>
-      {/* <motion.a
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.1 }}
-        href=""
-        className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
-      >
-        Show More
-        <Image
-          src={
-            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
-          }
-          alt="right-arrow-bold"
-          className="w-4"
-        />
-      </motion.a> */}
     </motion.div>
   );
 };
