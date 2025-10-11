@@ -43,13 +43,13 @@ export const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.9 }}
         className="grid grid-cols-[var(--col-auto)]  gap-3 dark:text-black "
       >
-        <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-none md:flex  items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
           {workData.map(({ bgImage, description, title, website }, index) => (
             <motion.a
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               key={index}
-              className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full"
+              className="relative group flex-grow transition-all md:w-56 h-[400px] duration-500 hover:w-full"
               href={website ? website : ""}
               target="_blank"
             >

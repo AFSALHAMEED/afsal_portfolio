@@ -20,7 +20,7 @@ export const Discipline = ({ isDarkMode }) => {
           </div>
           <div className="flex flex-col">
             <span>2019</span>
-            <span>B-Tech Mechanical Engineering </span>
+            <span>B-Tech Mechanical </span>
             <span>ICET,Muvattupuzha</span>
           </div>
         </div>
