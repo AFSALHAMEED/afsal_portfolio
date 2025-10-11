@@ -4,7 +4,7 @@ export const Discipline = ({ isDarkMode }) => {
   return (
     <div className="  mb-9 scroll-mt-24" id="discipline">
       <h4 className="text-center text-5xl !font-Ovo mb-9">Education</h4>
-      <div className="  lg:max-w-5xl mx-auto  grid grid-cols-2 pl-4 lg:pl-0 items-center place- lg:flex lg:justify-between flex-wrap gap-8">
+      <div className="  lg:max-w-5xl mx-auto  grid grid-cols-1  md:grid-cols-2 pl-4 lg:pl-0 items-center place- lg:flex lg:justify-between flex-wrap gap-8">
         <div className="flex gap-9">
           <div className="p-5 bg-blue-100  rounded-full">
             <svg
