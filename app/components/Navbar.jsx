@@ -24,7 +24,6 @@ export const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       }
     });
   }, []);
-  console.log({ isScrolled });
 
   return (
     <>
@@ -129,7 +128,7 @@ export const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="!font-Ovo" href="#discipline">
+            <a className="!font-Ovo" href="#discipline" onClick={closeMenu}>
               Discipline
             </a>
           </li>
