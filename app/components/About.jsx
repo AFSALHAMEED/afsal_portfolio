@@ -137,7 +137,7 @@ export const About = ({ isDarkMode }) => {
         Skills
       </motion.h2>
       <motion.h2
-        className="text-center text-5xl mt-9 !font-Ovo flex justify-between flex-wrap"
+        className="text-center text-5xl mt-9 !font-Ovo  grid grid-cols-4 gap-6 md:flex justify-between flex-wrap"
         initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 20 }}
         transition={{ duration: 0.5, delay: 0.5 }}

@@ -36,6 +36,7 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import afsal from "./afsal.jpg";
+import splitr from "./splitr.png";
 
 export const assets = {
   afsal,
@@ -80,24 +81,25 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "Splitr",
+    description:
+      "Track shared expenses, split bills effortlessly, and settle up quickly. Never worry about who owes who again",
+    bgImage: "/splitr.png",
+    website: "https://splitr-alpha.vercel.app/",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    title: "One Editor",
+    description:
+      "The editor, beautifully styled with Tailwind CSS and Shadcn UI, enables users to write and run code directly in the browser. Additionally, users can generate and share unique links to their code with others",
+    bgImage: "/oneEditor.png",
+    website: "https://one-editor-amec.vercel.app/",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Green cart",
+    description:
+      "A fully functional grocery delivery website using MongoDB, Express, React And Node JS ",
+    bgImage: "/greencart.png",
+    website: "https://green-cart-delta.vercel.app",
   },
 ];
 

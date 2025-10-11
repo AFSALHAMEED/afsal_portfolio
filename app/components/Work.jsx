@@ -43,29 +43,30 @@ export const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.9 }}
         className="grid grid-cols-[var(--col-auto)]  gap-3 dark:text-black "
       >
-        {workData.map(({ bgImage, description, title }, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            style={{
-              backgroundImage: `url(${bgImage})`,
-            }}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-          >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 ">
-              <div>
-                <h2 className="font-semibold">{title}</h2>
-                <p className="text-sm text-gray-700">{description}</p>
+        <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+          {workData.map(({ bgImage, description, title, website }, index) => (
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              key={index}
+              className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full"
+              href={website ? website : ""}
+              target="_blank"
+            >
+              <img
+                className="h-full w-full object-cover object-center"
+                src={bgImage}
+                alt="image"
+              />
+              <div className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <h1 className="text-3xl">{title}</h1>
+                <p className="text-sm">{description}</p>
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <Image src={assets.send_icon} alt="send-icon" className="w-5" />
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.a>
+          ))}
+        </div>
       </motion.div>
-      <motion.a
+      {/* <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1.1 }}
@@ -80,7 +81,7 @@ export const Work = ({ isDarkMode }) => {
           alt="right-arrow-bold"
           className="w-4"
         />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };

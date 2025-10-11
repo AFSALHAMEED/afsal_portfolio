@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
@@ -68,7 +70,7 @@ export const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="!font-Ovo" href="#contact">
+            <a className="!font-Ovo" href="#discipline">
               Discipline
             </a>
           </li>
@@ -127,7 +129,7 @@ export const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="!font-Ovo" href="#contact">
+            <a className="!font-Ovo" href="#discipline">
               Discipline
             </a>
           </li>
