@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { assets, infoList, toolsData } from "@/assets/assets";
+import { assets } from "@/assets/assets";
 
-export const About = ({ isDarkMode }) => {
+export const About = () => {
+  const [showMore, setShowMore] = useState(false);
   return (
     <motion.div
       id="about"
@@ -53,7 +56,9 @@ export const About = ({ isDarkMode }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.p
-            className="  !font-Ovo text-[22px] leading-9"
+            className={`!font-Ovo text-[22px] leading-9 line-clamp-${
+              showMore ? "none" : 5
+            } md:line-clamp-none transition-all ease-in  delay-700 duration-700`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
@@ -75,6 +80,20 @@ export const About = ({ isDarkMode }) => {
             parents and three sisters – who have always been a strong source of
             support and motivation for me.
           </motion.p>
+          <motion.button
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+            type="button"
+            onClick={() => setShowMore((prev) => !prev)}
+            className="cursor-pointer mt-4 py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover md:hidden"
+          >
+            {showMore ? "Show less" : " Show Full"}
+            <Image
+              src={assets.right_arrow_white}
+              alt="right-arrow-white "
+              className="w-4"
+            />
+          </motion.button>
           {/* <motion.ul
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
             initial={{ opacity: 0 }}
