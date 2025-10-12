@@ -56,8 +56,8 @@ export const About = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.p
-            className={`!font-Ovo text-[22px] leading-9 line-clamp-${
-              showMore ? "none" : 5
+            className={`!font-Ovo text-[22px] leading-9 ${
+              showMore ? "" : "line-clamp-5"
             } md:line-clamp-none transition-all ease-in  delay-700 duration-700`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
