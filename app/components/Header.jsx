@@ -55,7 +55,7 @@ export const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto !font-Ovo"
       >
-        I am a full stack developer from kerala, India with 2.11 years of
+        I am a full stack developer from kerala, India with 3 years of
         experience as Frontend developer.
       </motion.p>
       <div className="flex flex-col  md:flex-row items-center gap-4 mt-4 ">
@@ -77,7 +77,7 @@ export const Header = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="/afsalvh_resume.pdf"
+          href="/afsal_resume.pdf"
           download
           className="px-10 py-3 mt-4  md:mt-0 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
         >
